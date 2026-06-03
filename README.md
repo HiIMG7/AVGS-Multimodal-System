@@ -48,18 +48,18 @@ AVGS
 
 ---
 
-## 🚀 快速開始與執行步驟
+## 快速開始與執行步驟
 
 完成金鑰設定後，請開啟終端機（Terminal / Command Prompt），依序執行以下指令以啟動系統控制台介面：
 
-### 1. 切換至專案根目錄
+1. 切換至專案根目錄
 使用 `cd` 指令進入本專案原始碼存放的資料夾路徑（請根據您本機的實際路徑調整）：
 cd path/to/AVGS-Multimodal-System
+
 2. 安裝必要依賴套件
 首次執行前，請確保已安裝系統所需之核心 Python 庫：
-
-Bash
 pip install streamlit google-genai pillow imageio-ffmpeg moviepy requests
+
 3. 啟動 Streamlit 前端網頁
 執行以下指令，系統會自動在瀏覽器中開啟 AVGS 智能影音生成系統的互動控制台：
 streamlit run AVGS_Web.py
