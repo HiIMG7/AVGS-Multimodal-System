@@ -44,7 +44,6 @@ AVGS
 * gemini_key：填入 Google AI Studio 申請的 Gemini 2.5 憑證。
 * elevenlabs_key：填入 ElevenLabs 帳戶中的個人 API 金鑰（用於高品質語音合成）。
 * did_key：填入 D-ID 平台申請的 Basic 認證密鑰（格式通常為 Basic 後方加上一串 Base64 編碼，用於虛擬主播生成）。
-* voice_id：指定 ElevenLabs 的發音人 ID（預設 `nPczCjzI2devNBz1zQrb` 為系統實測之男性聲音參數）。
 
 ---
 
