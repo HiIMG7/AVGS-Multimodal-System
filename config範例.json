@@ -1,5 +1,6 @@
 {
   "gemini_key": "enter your APIKEY",
   "elevenlabs_key": "enter your APIKEY",
-  "did_key":"enter your DIDKEY"
+  "did_key":"enter your DIDKEY",
+  "presenter_name": "enter your presenter name"
 }
