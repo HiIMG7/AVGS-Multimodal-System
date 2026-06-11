@@ -147,9 +147,18 @@ def generate_slides():
                 
                 draw_scaled_text(draw, (1920/2, pub_y + 15), points[2], FONT_PATH_BOLD, 45, fill=(255, 255, 255), max_width=1700)
 
-            # 講者資訊
-            font_presenter = ImageFont.truetype(FONT_PATH_BOLD, 45) 
-            draw.text((1920/2, 980), "Presented By: Huang Jun Chi", font=font_presenter, fill=(200, 220, 255), anchor="mm")
+            # ---- 核心修改：動態檢測講者資訊，若無內容則空白不繪製 ----
+            # 使用 .get 抓取，如果沒有這個欄位或為空，就預設給空字串 ""
+            presenter_name = slide.get("presenter", "").strip()
+
+            if presenter_name:
+                presenter_text = f"Presented By: {presenter_name}"
+                # 講者資訊繪製
+                font_presenter = ImageFont.truetype(FONT_PATH_BOLD, 45) 
+                draw.text((1920/2, 980), presenter_text, font=font_presenter, fill=(200, 220, 255), anchor="mm")
+                print("  [提示] 成功繪製講者資訊")
+            else:
+                print("  [提示] 偵測到講者資訊為空，封面頁留白處理")
 
         else:
             img = get_background(BG_CONTENT, (20, 30, 60, 255))
